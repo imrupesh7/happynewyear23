@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+      
+    <script src="https://kit.fontawesome.com/1def09dae5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+
+            <p id="user"></p>
+            <div class="box"> H</div>
+            <div class="box"> A</div>
+            <div class="box"> A</div>
+            <div class="box"> P</div>
+            <div class="box"> N</div>
+            <div class="box"> E</div>
+            <div class="box"> W</div>
+            <div class="box"> Y</div>
+            <div class="box"> E</div>
+            <div class="box"> A</div>
+            <div class="box"> R</div>
+
+            <div id="clock"> </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="github">
+        <a href="https://github.com/imrupesh7"> <i class="fab fa-github"></i></a>
+    </div>
+
+
+    <script>
+
+
+       
+
+
+            var sname = prompt("Enter Your Name");
+            document.getElementById("user").innerHTML = "Wishing You" + " " + sname + "<br>"+" Happy New Year 2023" ;
+
+
+            let clock = () => {
+    let date = new Date();
+    let hrs = date.getHours();
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+
+    let am_pm = "AM";
+    if (hrs == 0) { hrs = 12;
+    }
+    else if (hrs >= 12) {
+        hrs = hrs - 12;
+        period = "PM";
+    }
+
+    hrs = hrs < 10 ? "0" + hrs : hrs;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+
+    let time = `${hrs}:${min}:${sec}:${am_pm}`;
+    document.getElementById("clock").innerText = time;
+    setTimeout(clock, 1000);
+};
+
+clock();
+
+    </script>
+
+
+    </script>
+
+</body>
+
+</html>
